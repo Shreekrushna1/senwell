@@ -1,0 +1,254 @@
+<div class="container">
+    <form [formGroup]="newForm">
+      
+       <div class="row"> 
+        
+        <div class="form-group  col-sm6 col-md-4 col-lg-3">
+          <label>
+            Borrower Id
+            <span class="text-danger">*</span>
+          </label>
+          <div class="example-container">
+            <mat-form-field appearance="fill" >
+              <input matInput placeholder="Your Answer"  formControlName="borrowerId" required >
+              <mat-error  *ngIf="newForm.controls['borrowerId'].hasError('required')">Please Enter Borrower Id</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="form-group col-md-4 col-lg-3 col-sm6">
+         <label> Scenario Id
+          <span class="text-danger">*</span>
+         </label>
+         <div class="example-container">
+          <mat-form-field appearance="fill">
+            <input matInput placeholder="Your Answer" formControlName="scenarioId" required >
+            <mat-error *ngIf="newForm.controls['scenarioId'].hasError('required')">Please Enter Scenario Id</mat-error>
+          </mat-form-field>
+         </div>
+        </div>
+       </div>
+       <div class="mb-2 mt3">
+        <h3>Personal Details</h3>
+       </div>
+       <div class="row"> 
+        
+        <div class="form-group  col-sm6 col-md-4 col-lg-3">
+          <label>
+            Salutation
+            <span class="text-danger">*</span>
+          </label>
+          <div class="example-container">
+            <mat-form-field appearance="fill" >
+              <input matInput placeholder="Your Ans" formControlName="Salutation" required >
+              <mat-error *ngIf="newForm.controls['Salutation'].hasError('required')">Please Enter Salutation</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="form-group col-md-4 col-lg-3 col-sm6">
+         <label> First Name
+          <span class="text-danger">*</span>
+         </label>
+         <div class="example-container">
+          <mat-form-field appearance="fill">
+            <input matInput placeholder="Your Answer" formControlName="FirstName" required >
+            <mat-error *ngIf="newForm.controls['FirstName'].hasError('required')">Please Enter First Name</mat-error>
+          </mat-form-field>
+         </div>
+        </div>
+        <div class="form-group col-md-4 col-lg-3 col-sm6">
+         <label> Last Name
+          <span class="text-danger">*</span>
+         </label>
+         <div class="example-container">
+          <mat-form-field appearance="fill">
+            <input matInput placeholder="Your Answer" formControlName="LastName" required >
+            <mat-error *ngIf="newForm.controls['LastName'].hasError('required')">Please Enter Last Name</mat-error>
+          </mat-form-field>
+         </div>
+        </div>
+        <div class="form-group col-md-4 col-lg-3 col-sm6">
+         <label> Title/Role
+          <span class="text-danger">*</span>
+         </label> 
+         <div class="example-container">
+          <mat-form-field appearance="fill">
+            <mat-label>Select</mat-label>
+            <select matNativeControl formControlName="titleRole" required>
+              <option >Self </option>
+              <option >Other Individual</option>
+              <option >Director</option> 
+            </select>
+            <mat-error *ngIf="newForm.controls['titleRole'].hasError('required')">Please Select Title/Role</mat-error>
+          </mat-form-field>
+         </div>
+        </div>
+      
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+       <label> Address 
+       </label>
+       <div class="example-container">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Your Answer" formControlName="Address"  >
+        </mat-form-field>
+       </div>
+      </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+       <label> City 
+       </label>
+       <div class="example-container">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Your Answer" formControlName="City"  >
+        </mat-form-field>
+       </div>
+      </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+       <label> State/Province/Territory 
+       </label>
+       <div class="example-container">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Your Answer" formControlName="State" >
+        </mat-form-field>
+       </div>
+      </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+       <label> PostCode 
+       </label>
+       <div class="example-container">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Your Answer" formControlName="PostCode"  >
+        </mat-form-field>
+       </div>
+      </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+       <label> Email Address 
+       </label>
+       <div class="example-container">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Your Answer" formControlName="Email"  >
+        </mat-form-field>
+       </div>
+      </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+       <label> Phone Number 
+       </label>
+       <div class="example-container">
+        <mat-form-field appearance="fill">
+          <input matInput placeholder="Your Answer" formControlName="PhoneNumber"  >
+        </mat-form-field>
+       </div>
+      </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+       <label> Date Of Birth
+       </label>
+       <div class="example-container">
+        <mat-form-field appearance="fill">
+          <input type="date" matInput placeholder="Your Answer" formControlName="DOB"  >
+        </mat-form-field>
+       </div>
+      </div>
+    </div>
+  
+    <div class="mb-2 mt3">
+      <h3> Identity Details  
+             </h3>
+     </div>
+    <div class="row">
+      
+  
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+        <label> Passport Id
+        </label>
+        <div class="example-container">
+         <mat-form-field appearance="fill">
+           <input  matInput placeholder="Your Answer" formControlName="PassportID"  >
+         </mat-form-field>
+        </div>
+       </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+        <label> Name On Passport
+        </label>
+        <div class="example-container">
+         <mat-form-field appearance="fill">
+           <input matInput placeholder="Your Answer" formControlName="NameOnPassport"  >
+         </mat-form-field>
+        </div>
+       </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+        <label> Passport Expiry 
+        </label>
+        <div class="example-container">
+         <mat-form-field appearance="fill">
+           <input type="date" matInput placeholder="Your Answer" formControlName="PassportExpiry"  >
+         </mat-form-field>
+        </div>
+       </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+        <label> Drivers License ID
+        </label>
+        <div class="example-container">
+         <mat-form-field appearance="fill">
+           <input  matInput placeholder="Your Answer" formControlName="DLID"  >
+         </mat-form-field>
+        </div>
+       </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+        <label> Name On DL
+        </label>
+        <div class="example-container">
+         <mat-form-field appearance="fill">
+           <input matInput placeholder="Your Answer" formControlName="NameOnDL"  >
+         </mat-form-field>
+        </div>
+       </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+        <label>State of Issuance
+        </label>
+        <div class="example-container">
+         <mat-form-field appearance="fill">
+           <input matInput placeholder="Your Answer" formControlName="StateOfInssuance"  >
+         </mat-form-field>
+        </div>
+       </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+        <label>Australian Business Number
+        </label>
+        <div class="example-container">
+         <mat-form-field appearance="fill">
+           <input  matInput placeholder="Your Answer" formControlName="ABN"  >
+         </mat-form-field>
+        </div>
+       </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+        <label>Tax File Number
+        </label>
+        <div class="example-container">
+         <mat-form-field appearance="fill">
+           <input  matInput placeholder="Your Answer" formControlName="TaxFileNumber"  >
+         </mat-form-field>
+        </div>
+       </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+        <label> Social Sovereign ID
+        </label>
+        <div class="example-container">
+         <mat-form-field appearance="fill">
+           <input  matInput placeholder="Your Answer" formControlName="SSID"  >
+         </mat-form-field>
+        </div>
+       </div>
+      <div class="form-group col-md-4 col-lg-3 col-sm6">
+        <label> Credit Score
+        </label>
+        <div class="example-container">
+         <mat-form-field appearance="fill">
+           <input type="number" matInput placeholder="Your Answer" formControlName="CreditScore" >
+         </mat-form-field>
+        </div>
+       </div>
+    </div>
+      
+    </form>
+    <button class="btn btn-primary" routerLink="formTwo"   (click)="form2()" [disabled]="!newForm.valid" >Next Page</button>
+    &nbsp;
+    <button class="btn btn-success"(click)="PatchedData()" >Load Data</button>
+   </div>
